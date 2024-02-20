@@ -48,7 +48,7 @@ $il i3-gaps i3status xsetroot xdo setxkbmap \
 $il pulsemixer wireplumber pipewire rtkit pfetch lxappearance mpv arandr neovim 
 
 #OTROS
-$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot lxqt-policykit python3-pip
+$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot lxqt-policykit python3-pip rofi
 
 #FONTS
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
