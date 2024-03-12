@@ -16,7 +16,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id feh --bg-fill /home/luc/.local/share/wallpapers/void.png
 
 #polkit
-exec --no-startup-id /usr/bin/lxqt-policykit-agent
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 
 #trasparencia 
 #exec_always --no-startup-id picom
@@ -66,7 +66,7 @@ bindsym $mod+Shift+i exec "ristretto"
 #telegram
 bindsym $mod+Shift+a exec "lxappearance"
 # mostrar lanzador de aplicaciones
-#bindsym $mod+shift+d exec --no-startup-id dmenu_run -b
+bindsym $mod+shift+d exec --no-startup-id rofi -show drun
 
 # Cerrar ventana 
 bindsym $mod+Shift+q kill

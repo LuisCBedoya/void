@@ -32,7 +32,7 @@ $il void-repo-{nonfree,multilib,multilib-nonfree}
 $s xbps-install -Sy
 
 #ESENCIALES
-$il at-spi2-core p7zip xorg-minimal xorg-fonts xorg-video-drivers xsetroot gvfs ntfs-3g curl wget 
+$il at-spi2-core p7zip xorg-minimal xorg-fonts xorg-video-drivers xsetroot gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi xdg-user-dirs
 
 #NVIDIA
 $il nvidia nvidia-libs-32bit
@@ -40,17 +40,19 @@ $il nvidia nvidia-libs-32bit
 #PARA COMPILAR(OPCIONAL)
 $il base-devel
 
+#WORKSPACE
+$il i3-gaps i3status 
+
 #BASE
-$il i3-gaps i3status xsetroot xdo setxkbmap \
-	dbus kitty elogind feh pcmanfm
+$il dbus kitty elogind feh pcmanfm xsetroot xdo setxkbmap 
 
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit pfetch lxappearance mpv arandr neovim 
 
 #OTROS
-$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot lxqt-policykit python3-pip rofi
+$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip rofi polkit-gnome timeshift
 
-#FONTS
+#FONTS 
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
 
 #LIBS PARA JUEGOS(OPCIONAL)
@@ -70,13 +72,14 @@ $s ln -s /etc/sv/dbus /var/service/
 $s rm -r /var/service/polkitd
 
 #CONFIG
-#xdg-user-dirs-update
+xdg-user-dirs-update
 
 echo -e '#autostart
 \nif [ -d "$HOME/.local/bin" ] ; then
 \n    PATH="$HOME/.local/bin:$PATH"
 \nfi
 \npipewire &
+\nsetxkbmap latam &
 \nexec dbus-run-session i3'> $HOME/.xinitrc 
 
 #PIPEWIRE_CONFIG
