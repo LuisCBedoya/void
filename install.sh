@@ -41,7 +41,7 @@ $il nvidia nvidia-libs-32bit
 $il base-devel
 
 #WORKSPACE
-$il i3-gaps i3status 
+#$il i3-gaps i3status 
 
 #BASE
 $il dbus kitty elogind feh pcmanfm xsetroot xdo setxkbmap 
