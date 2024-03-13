@@ -50,7 +50,10 @@ $il dbus kitty elogind feh pcmanfm xsetroot xdo setxkbmap
 $il pulsemixer wireplumber pipewire rtkit pfetch lxappearance mpv arandr neovim 
 
 #OTROS
-$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip rofi polkit-gnome timeshift
+$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip rofi polkit-gnome timeshift flatpak
+
+#REPO flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 #FONTS 
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
