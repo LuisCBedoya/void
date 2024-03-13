@@ -50,7 +50,7 @@ $il dbus elogind xsetroot xdo setxkbmap
 $il pulsemixer wireplumber pipewire rtkit 
 
 #OTHERS
-$il python3-virtualenv python3-pip ripgrep dunst libnotify android-tools 
+$il python3-virtualenv python3-pip ripgrep dunst libnotify android-tools papirus-icon-theme
 
 #USER APP
 $il kitty keepassxc leafpad zathura timeshift mpv rofi 
