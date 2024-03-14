@@ -53,7 +53,7 @@ $il pulsemixer wireplumber pipewire rtkit
 $il python3-virtualenv python3-pip ripgrep dunst libnotify android-tools papirus-icon-theme
 
 #USER APP
-$il kitty keepassxc leafpad zathura timeshift mpv rofi 
+$il kitty keepassxc leafpad zathura timeshift mpv rofi flameshot obconf
 
 #LIBS PARA JUEGOS(OPCIONAL)
 #$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit

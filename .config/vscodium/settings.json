@@ -1,0 +1,119 @@
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Victor Mono",
+    "editor.fontLigatures": "'ss06'",
+    "editor.fontWeight": "700",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "none",
+    "editor.cursorBlinking": "expand",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "workbench.sideBar.location": "right", 
+    "editor.lineNumbers": "relative",
+    "workbench.activityBar.location": "hidden",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    // VIM COMMANDS
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [":"],
+            "commands": [
+                "workbench.action.showCommands",
+            ],
+            "silent": true
+        },
+        {
+            "before": ["<Tab>"],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ],
+            "silent": true
+        },
+        {
+            "before": ["<leader>","t"],
+            "commands": [
+                "workbench.action.terminal.new"
+            ],
+        },
+        {
+            "before": ["<leader>","x"],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ],
+        },
+        {
+            "before": ["t"],
+            "after": ["%"]
+        },
+        {
+            "before": ["<leader>","c"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["v"],
+            "after": ["V"]
+        },
+        {
+            "before": [
+                "<leader>","ñ"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "ñ"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","x"],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ],
+        },
+        {
+            "before": ["t"],
+            "after": ["%"]
+        },
+        {
+            "before": [
+                "<leader>","ñ"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "ñ"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": ["leader","c"],
+            "commands": ["editor.action.commentLine"]
+        },
+    ],
+    "vim.leader": "<space>",
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+}
