@@ -44,25 +44,25 @@ $il nvidia nvidia-libs-32bit
 $il base-devel
 
 #WORKSPACE
+#i3
 #$il i3-gaps i3status 
+#dwm
+#$il libX11-devel libXft-devel libXinerama-devel
 
 #BASE
-$il dbus kitty elogind feh pcmanfm xsetroot xdo setxkbmap 
+$il dbus xfce4-terminal elogind xsetroot xdo setxkbmap 
 
 #AUDIO 
-$il pulsemixer wireplumber pipewire rtkit pfetch lxappearance mpv arandr neovim 
+$il pulsemixer wireplumber pipewire rtkit 
 
 #OTROS
-$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip rofi polkit-gnome timeshift flatpak
-
-#REPO flatpakrepo
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+$il pfetch lxappearance mpv arandr neovim keepassxc android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip rofi xfce-polkit timeshift feh Thunar
 
 #FONTS 
-$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
+$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	firefox
 
 #LIBS PARA JUEGOS(OPCIONAL)
-#$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
+$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
 
 #FONT FIX
 $s ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/

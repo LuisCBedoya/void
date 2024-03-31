@@ -1,0 +1,10 @@
+[user]
+pinned=/usr/share/applications/thunar.desktop;/usr/share/applications/firefox.desktop;/usr/share/applications/xfce4-terminal.desktop;/usr/share/applications/codium.desktop;
+indicatorStyle=0
+indicatorColor=rgb(76,166,230)
+inactiveColor=rgb(76,166,230)
+showPreviews=true
+forceIconSize=false
+iconSize=24
+onlyDisplayScreen=false
+onlyDisplayVisible=true

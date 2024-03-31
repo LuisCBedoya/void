@@ -1,0 +1,11 @@
+[Configuration]
+FontName=Hack Regular 10
+FontUseSystem=FALSE
+ColorForeground=#ffffff
+ColorBackground=#000000
+ColorPalette=#000000;#aa0000;#44aa44;#aa5500;#0039aa;#aa22aa;#1a92aa;#aaaaaa;#777777;#ff8787;#4ce64c;#ded82c;#295fcc;#cc58cc;#4ccce6;#ffffff
+ColorSelectionUseDefault=TRUE
+ColorCursor=#ffffff
+ColorBoldUseDefault=TRUE
+TabActivityColor=#0f4999
+MiscConfirmCloseMultipleTabs=FALSE
