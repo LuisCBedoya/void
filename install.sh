@@ -44,7 +44,11 @@ $il nvidia nvidia-libs-32bit
 $il base-devel
 
 #WORKSPACE
+#i3
 #$il i3-gaps i3status 
+#dwm
+#$il libX11-devel libXft-devel libXinerama-devel
+
 
 #BASE
 $il dbus kitty elogind feh pcmanfm xsetroot xdo setxkbmap 
