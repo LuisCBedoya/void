@@ -14,18 +14,17 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 /* static const char dmenufont[]       = "HackRegular:size=9:style=Bold"; */
 static const char *fonts[]          = { "HackBold:size=9:style=Bold" };
 static const char dmenufont[]       = "HackBold:size=9:style=Bold";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-/* static const char col_cyan[]        = "#215B8B"; */
-static const char col_cyan[]        = "#306A98";
-
-/* "#005577"; */
-static const char *colors[][3]      = {
+static const char col_gray1[]       = "#161515"; /*191e25*/
+static const char col_gray2[]       = "#c6c6c6";
+static const char col_gray3[]       = "#000000";
+static const char col_gray4[]       = "#506980";
+static const char col_cyan[]        = "#2D3A46";/*607190*/
+static const unsigned int baralpha        = 100;
+static const unsigned int borderalpha     = 100;
+static const char *colors[][3] = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray2, col_gray3, col_gray1 },
+	[SchemeSel]  = { col_gray4, col_gray3,  col_cyan  },
 };
 
 static const char *const autostart[] = {
@@ -36,7 +35,7 @@ static const char *const autostart[] = {
   "nitrogen", "--restore", NULL,
   "pipewire", NULL,
   "sh", "-c", "~/.config/dunst/scripts/low_bat_notifier.sh", NULL,
-  "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", NULL,
+  "/usr/libexec/xfce-polkit", NULL,
   NULL /* terminate */
 };
 
@@ -80,7 +79,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0";
 static const char *dmenucmd[] = { "rofi", "-show","drun", NULL };
-static const char *termcmda[]  = { "st", NULL };
+static const char *termcmda[]  = { "kitty", NULL };
 static const char *termcmd[]  = { "xfce4-terminal", NULL }; 
 static const char *firefox[]  = { "firefox", NULL };
 static const char *flameshot[] =   { "flameshot", "gui", NULL };
@@ -111,7 +110,7 @@ static const Key keys[] = {
 
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_c,      focusstack,     {.i = +1 } },
+	{ Mod1Mask,                   XK_Tab,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },

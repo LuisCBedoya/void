@@ -7,7 +7,7 @@
   <property name="color-selection-use-default" type="bool" value="true"/>
   <property name="color-bold-use-default" type="bool" value="true"/>
   <property name="color-palette" type="string" value="#000000;#aa0000;#44aa44;#aa5500;#0039aa;#aa22aa;#1a92aa;#aaaaaa;#777777;#ff8787;#4ce64c;#ded82c;#295fcc;#cc58cc;#4ccce6;#ffffff"/>
-  <property name="font-name" type="string" value="Victor Mono Semi-Bold 10"/>
+  <property name="font-name" type="string" value="FiraCode Nerd Font Medium 10"/>
   <property name="font-use-system" type="bool" value="false"/>
   <property name="tab-activity-color" type="string" value="#0f4999"/>
   <property name="misc-default-geometry" type="string" value="80x24"/>
@@ -16,9 +16,10 @@
   <property name="cell-width-scale" type="double" value="1"/>
   <property name="cell-height-scale" type="double" value="1"/>
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
-  <property name="misc-borders-default" type="bool" value="true"/>
+  <property name="misc-borders-default" type="bool" value="false"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
   <property name="misc-cursor-blinks" type="bool" value="true"/>
   <property name="misc-confirm-close" type="bool" value="false"/>
   <property name="misc-cursor-shape" type="string" value="TERMINAL_CURSOR_SHAPE_BLOCK"/>
+  <property name="scrolling-on-keystroke" type="bool" value="true"/>
 </channel>
