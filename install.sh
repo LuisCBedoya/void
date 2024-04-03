@@ -38,16 +38,17 @@ $il at-spi2-core p7zip xorg-minimal xorg-fonts xorg-video-drivers xsetroot gvfs 
 $il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver
 
 #NVIDIA
-$il nvidia nvidia-libs-32bit
+$il nvidia
 
 #PARA COMPILAR(OPCIONAL)
-$il base-devel
+$il base-devel git pkg-config openssl-devel libtool autoconf automake cmake
 
 #WORKSPACE
 #i3
 #$il i3-gaps i3status 
 #dwm
 #$il libX11-devel libXft-devel libXinerama-devel
+#$il openbox obconf
 
 #BASE
 $il dbus kitty elogind xsetroot xdo setxkbmap 
@@ -56,10 +57,10 @@ $il dbus kitty elogind xsetroot xdo setxkbmap
 $il pulsemixer wireplumber pipewire rtkit 
 
 #OTROS
-$il pfetch lxappearance mpv arandr neovim android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip rofi polkit-gnome timeshift Thunar nitrogen
+$il lxappearance mpv neovim android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen
 
 #FONTS 
-$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	firefox
+$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
 
 #LIBS PARA JUEGOS(OPCIONAL)
 $il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
