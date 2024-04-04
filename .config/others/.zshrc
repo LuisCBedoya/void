@@ -128,3 +128,4 @@ bindkey '^w' up-line-or-search
 
 bindkey '^s' down-line-or-search
 
+export XBPS_BUILDDIR=/tmpfs

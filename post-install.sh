@@ -32,5 +32,5 @@ $il void-repo-{nonfree,multilib,multilib-nonfree}
 $s xbps-install -Sy
 
 #install
-$il linux mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver papirus-icon-theme base-devel nvidia nvidia-libs-32bit
+$il linux mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver papirus-icon-theme base-devel nvidia nvidia-libs-32bit intel-ucode
 #export LIBVA_DRIVER_NAME=i965
