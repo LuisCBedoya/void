@@ -35,7 +35,7 @@ $s xbps-install -Sy
 $il at-spi2-core p7zip xorg-minimal xorg-fonts xorg-video-drivers xsetroot gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi xdg-user-dirs
 
 #INTEL export LIBVA_DRIVER_NAME=i965
-$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver
+$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver intel-ucode
 
 #NVIDIA
 $il nvidia
@@ -51,19 +51,19 @@ $il base-devel git pkg-config openssl-devel libtool autoconf automake cmake
 #$il openbox obconf
 
 #BASE
-$il dbus kitty elogind xsetroot xdo setxkbmap 
+$il dbus elogind xsetroot xdo setxkbmap 
 
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit 
 
 #OTROS
-$il lxappearance mpv neovim android-tools leafpad zathura dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen
+$il lxappearance neovim leafpad dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen
 
 #FONTS 
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
 
 #LIBS PARA JUEGOS(OPCIONAL)
-$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
+#$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
 
 #FONT FIX
 $s ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
