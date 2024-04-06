@@ -86,7 +86,7 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *termcmda[]  = {"st", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *flameshot[] =   { "flameshot", "gui", NULL };
-static const char *pcmanfm[] =   { "thunar", NULL };
+static const char *pcmanfm[] =   { "pcmanfm", NULL };
 static const char *keepassxc[] =   { "keepassxc", NULL };
 static const char *idea[] =   { "sh /opt/idea/bin/idea.sh", NULL };
 
