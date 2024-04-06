@@ -1,4 +1,4 @@
 XBPS_MAKEJOBS=6
 XBPS_ALLOW_RESTRICTED=yes
-XBPS_CFLAGS="-march=native -O2 -pipe"
+XBPS_CFLAGS="-march=skylake -O2 -pipe"
 XBPS_CXXFLAGS="$XBPS_CFLAGS"
