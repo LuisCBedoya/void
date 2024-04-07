@@ -4,3 +4,4 @@ XBPS_CFLAGS="-march=skylake -O2 -pipe"
 XBPS_FFLAGS="$XBPS_CFLAGS"
 XBPS_CXXFLAGS="$XBPS_CFLAGS"
 XBPS_LDFLAGS="-Wl,-O1 -Wl,--strip-all"
+XBPS_BUILDDIR=/tmpfs/xbps
