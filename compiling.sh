@@ -37,3 +37,6 @@ git clone --depth 1 https://github.com/void-linux/void-packages.git
 cd void-packages
 # Instalar los paquetes de arranque
 #./xbps-src binary-bootstrap
+#$s mkdir /tmpfs/xbps
+#$s mount -t tmpfs -o size=4G tmpfs /tmpfs/xbps/
+#$s reboot
