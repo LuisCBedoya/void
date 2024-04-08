@@ -41,7 +41,7 @@ $il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtoo
 $il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi xdg-user-dirs
 
 #INTEL (export LIBVA_DRIVER_NAME=i965)
-$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver intel-ucode
+$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver intel-ucode linux-firmware-intel
 
 #NVIDIA
 $il nvidia
@@ -50,7 +50,7 @@ $il nvidia
 $il pulsemixer wireplumber pipewire rtkit 
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen
+$il lxappearance neovim dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen lsd bat
 
 #FONTS 
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	

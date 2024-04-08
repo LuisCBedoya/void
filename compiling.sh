@@ -34,7 +34,7 @@ $s xbps-install -Sy
 $il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtools ncurses-devel pkg-config xorg-minimal xorg-fonts xorg-video-drivers setxkbmap 
 # Clonar el repositorio void-packages
 git clone --depth 1 https://github.com/void-linux/void-packages.git
-cd void-packages
+#cd void-packages
 # Instalar los paquetes de arranque
 #./xbps-src binary-bootstrap
 #$s mkdir /tmpfs/xbps
