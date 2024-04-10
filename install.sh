@@ -44,13 +44,13 @@ $il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wge
 $il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver intel-ucode linux-firmware-intel
 
 #NVIDIA
-$il nvidia
+$il nvidia nvidia-libs-32bit
 
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit 
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen lsd bat
+$il lxappearance neovim dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen lsd 
 
 #FONTS 
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
