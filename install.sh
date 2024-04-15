@@ -38,10 +38,10 @@ $il xorg-minimal xorg-fonts xorg-video-drivers
 $il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtools ncurses-devel pkg-config
 
 #BASE
-$il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi xdg-user-dirs
+$il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi 
 
-#INTEL (export LIBVA_DRIVER_NAME=i965)
-$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver intel-ucode linux-firmware-intel
+#INTEL (export LIBVA_DRIVER_NAME=i965) (export LIBVA_DRIVER_NAME=iHD)
+$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
 #NVIDIA
 $il nvidia nvidia-libs-32bit
@@ -49,17 +49,21 @@ $il nvidia nvidia-libs-32bit
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit 
 
-#USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep python3-virtualenv flameshot python3-pip timeshift pcmanfm nitrogen lsd 
+#PYHTON TOOLS
+$il python3-pip python3-virtualenv
 
-#FONTS 
-$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
+#USER PACKAGES
+$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm nitrogen
+
+#FONTS, BROWSER AND OTHERS
+$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	qutebrowser python3-adblock
 
 #WORKSPACE
 #i3
 #$il i3-gaps i3status 
 #dwm
 #$il libX11-devel libXft-devel libXinerama-devel
+#Openbox
 #$il openbox obconf
 
 #LIBS PARA JUEGOS(OPCIONAL)
@@ -78,7 +82,7 @@ $s ln -s /etc/sv/dbus /var/service/
 $s rm -r /var/service/polkitd
 
 #CONFIG
-xdg-user-dirs-update
+#xdg-user-dirs-update
 
 echo -e '#autostart
 \nif [ -d "$HOME/.local/bin" ] ; then

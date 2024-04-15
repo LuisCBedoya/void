@@ -31,8 +31,8 @@ $s xbps-install -Sy
 $il void-repo-{nonfree,multilib,multilib-nonfree}
 $s xbps-install -Sy
 
-#INTEL (export LIBVA_DRIVER_NAME=i965)
-$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver intel-ucode linux-firmware-intel
+#INTEL (export LIBVA_DRIVER_NAME=i965) (export LIBVA_DRIVER_NAME=iHD)
+$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
 #NVIDIA
 $il nvidia nvidia-libs-32bit
@@ -51,6 +51,9 @@ $il pulsemixer wireplumber pipewire rtkit
 
 #USER APP
 $il kitty timeshift keepassxc
+
+#FONTS, BROWSER AND OTHERS
+$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	qutebrowser 
 
 #FONT FIX
 $s ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
