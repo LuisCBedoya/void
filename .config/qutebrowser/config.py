@@ -32,6 +32,8 @@ config.bind('<Tab>', 'tab-next', mode='normal')
 config.bind('<Ctrl-H>', 'back', mode='normal')
 config.bind('<Ctrl-n>', 'fake-key <Backspace>', 'insert')
 config.bind('<Alt-h>', 'fake-key <Ctrl-BackSpace>', 'insert')
-
-
+config.bind('<Ctrl-Alt-h>', 'open -t https://github.com/login')
+config.bind('<Ctrl-Alt-l>', 'open -t https://gitlab.com/users/sign_in')
+config.bind('<Ctrl-Alt-d>', 'open -t https://www.deepl.com/translator')
+config.bind('<Ctrl-Alt-y>', 'open -t https://www.youtube.com/')
 

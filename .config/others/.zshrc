@@ -1,13 +1,17 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="clean"
-bindkey '^a' backward-kill-word
+#bindkey '^a' backward-kill-word
+#bindkey '^e' end-of-line
+#bindkey '^w' up-line-or-search
+#bindkey '^s' down-line-or-search
+#bindkey '^p' up-line-or-history   
+
+bindkey '^[h' backward-kill-word
 bindkey '^d' forward-word
-bindkey '^e' end-of-line
-bindkey '^w' up-line-or-search
-bindkey '^s' down-line-or-search
-bindkey '^n' down-line-or-history  
-bindkey '^p' up-line-or-history   
+bindkey '^[k' up-line-or-search
+bindkey '^[j' down-line-or-search
+bindkey '^N' backward-delete-char
 
 
 plugins=(git
@@ -65,12 +69,15 @@ alias ......='cd ../../../../..'
 alias fre='sudo fc-cache -f -v && fc-cache -f -v'
 #sources
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+#source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/completion.zsh
 
 #exports
-export LIBVA_DRIVER_NAME=i965
+export LIBVA_DRIVER_NAME=iHD
 export PATH=$PATH:/usr/lib/jvm/jdk-17-oracle-x64/bin/
-export NVM_DIR="$HOME/.nvm"
+#export LIBVA_DRIVER_NAME=i965
+
+
+export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
