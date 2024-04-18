@@ -53,10 +53,10 @@ $il pulsemixer wireplumber pipewire rtkit
 $il python3-pip python3-virtualenv
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm nitrogen
+$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm 
 
 #FONTS, BROWSER AND OTHERS
-$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	qutebrowser python3-adblock
+$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	
 
 #WORKSPACE
 #i3

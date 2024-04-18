@@ -1,11 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="clean"
-#bindkey '^a' backward-kill-word
-#bindkey '^e' end-of-line
-#bindkey '^w' up-line-or-search
-#bindkey '^s' down-line-or-search
-#bindkey '^p' up-line-or-history   
+ZSH_THEME="minimal"
 
 bindkey '^[h' backward-kill-word
 bindkey '^d' forward-word
@@ -18,7 +13,6 @@ plugins=(git
 	sudo)
 
 source $ZSH/oh-my-zsh.sh
-
 
 ## Options section
 setopt correct                                                  # Auto correct mistakes
@@ -59,14 +53,14 @@ HISTSIZE=50000
 SAVEHIST=10000
 
 #keybindings
-alias ls='lsd --group-dirs first'
-alias lt='lsd --tree'
+#alias ls='lsd --group-dirs first'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias fre='sudo fc-cache -f -v && fc-cache -f -v'
+
 #sources
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source /usr/share/fzf/key-bindings.zsh
@@ -75,9 +69,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #exports
 export LIBVA_DRIVER_NAME=iHD
 export PATH=$PATH:/usr/lib/jvm/jdk-17-oracle-x64/bin/
-#export LIBVA_DRIVER_NAME=i965
-
-
-export NVM_DIR="$HOME/.config/nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
