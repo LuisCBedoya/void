@@ -16,7 +16,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id feh --bg-fill /home/luc/.local/share/wallpapers/void.png
 
 #polkit
-exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/libexec/xfce-polkit
 
 #trasparencia 
 #exec_always --no-startup-id picom
@@ -50,7 +50,7 @@ floating_modifier $mod
 
 
 # Iniciar terminal 
-bindsym $mod+Return exec "kitty"
+bindsym $mod+Return exec "xfce4-terminal"
 # screenshot
 bindsym $mod+shift+s exec "flameshot gui"
 #passwd manager
