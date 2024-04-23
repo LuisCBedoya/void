@@ -12,11 +12,26 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "onlySnippets",
-  "workbench.sideBar.location": "left",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": "single",
   "editor.lineNumbers": "relative",
   "workbench.activityBar.location": "hidden",
+  "editor.guides.indentation": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "workbench.statusBar.visible": false,
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+  "breadcrumbs.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.glyphMargin": false,
+  "explorer.autoReveal": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.wordWrap": "on",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "vim.foldfix": true,
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -24,8 +39,69 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // ######### leader keys
     {
-      "before": [":"],
+      "before": ["<leader>", "k"],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.findInFiles"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.view.scm"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "d"],
+      "commands": ["workbench.view.debug"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "e"],
+      "commands": ["workbench.view.extensions"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "r"],
+      "commands": ["editor.action.goToReferences"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "f", "p"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleMenuBar"]
+    },
+    // ###########
+
+    {
+      "before": ["<C-Space>"],
       "commands": ["workbench.action.showCommands"],
       "silent": true
     },
@@ -35,16 +111,8 @@
       "silent": true
     },
     {
-      "before": ["<leader>", "x"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
       "before": ["t"],
       "after": ["%"]
-    },
-    {
-      "before": ["<leader>", "c"],
-      "commands": ["editor.action.commentLine"]
     },
     {
       "before": ["v"],
@@ -84,5 +152,38 @@
   "vim.leader": "<space>",
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
-  }
+  },
+
+  "workbench.enableExperiments": false,
+  "workbench.editor.enablePreview": false,
+  "editor.fastScrollSensitivity": 1,
+  "editor.smoothScrolling": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.scrollbar.horizontalScrollbarSize": 0,
+  "editor.renderControlCharacters": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/.git": true,
+    "**/.vscode": true,
+    "**/coverage": true,
+    "**/temp": true,
+    "**/temporal": true,
+    "**/*.tsbuildinfo": true
+  },
+  "search.useIgnoreFiles": false,
+  "search.useGlobalIgnoreFiles": false,
+  "editor.hover.delay": 0,
+  "editor.hover.enabled": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.parameterHints.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "window.menuBarVisibility": "toggle"
 }
