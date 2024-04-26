@@ -44,7 +44,7 @@ $il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wge
 $il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
 #NVIDIA
-$il nvidia nvidia-libs-32bit
+$il nvidia
 
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit 
@@ -60,7 +60,7 @@ $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
 
 #WORKSPACE
 #i3
-$il i3-gaps i3status 
+#$il i3-gaps i3status 
 #dwm
 #$il libX11-devel libXft-devel libXinerama-devel
 #Openbox
