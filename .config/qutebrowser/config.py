@@ -1,3 +1,4 @@
+#### Config
 config.load_autoconfig(True)
 c.content.autoplay = False
 #config.source('$HOME/Sync/Qutebrowser/config2.py')
@@ -15,9 +16,11 @@ c.downloads.location.directory = '$HOME/Descargas/'
 c.downloads.location.suggestion = 'both'
 c.colors.webpage.darkmode.enabled = True
 c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
+c.tabs.show = 'switching'
+config.bind('zb', 'config-cycle statusbar.show always never')
+config.bind('zt', 'config-cycle tabs.show always never')
 
-######### Normal mode
-#unbind 
+#### Unbind 
 config.unbind('<Ctrl-PgUp>',mode='normal')
 config.unbind('<Ctrl-PgDown>',mode='normal')
 config.unbind('<Ctrl-H>',mode='normal')
@@ -29,7 +32,8 @@ config.unbind('<Ctrl-t>')
 config.unbind('<Alt-M>', mode='normal')
 config.unbind('H', mode='normal')
 #config.unbind("<Ctrl-T>")
-#keybindings
+
+#### Keybindings
 config.bind(',ya', 'yank inline {url:pretty}[{title}]')
 config.bind(',ym', 'yank inline [{title}]({url:pretty})')
 config.bind(',sm', 'set-cmd-text :download --mhtml')
@@ -45,8 +49,20 @@ config.bind('d', 'scroll-page 0 0.5', mode='normal')
 config.bind('u', 'scroll-page 0 -0.5', mode='normal')
 config.bind('x', 'tab-close')
 config.bind('t', 'open -t')
-config.bind('j', 'mode-leave insert')
-config.bind('k', 'mode-leave insert')
 config.bind('h', 'back', mode='normal')
+config.bind('M', 'hint links spawn mpv {hint-url}')
+
+
+
+#### Fonts
+c.fonts.default_family = '"Hack Regular"'
+c.fonts.default_size = '9pt'
+c.fonts.completion.entry = '9pt "Hack Regular"'
+c.fonts.debug_console = '9pt "Hack Regular"'
+c.fonts.prompts = 'default_size sans-serif'
+c.fonts.statusbar = '9pt "Hack Regular"'
+
+
+
 
 
