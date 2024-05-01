@@ -16,9 +16,17 @@ c.downloads.location.directory = '$HOME/Descargas/'
 c.downloads.location.suggestion = 'both'
 c.colors.webpage.darkmode.enabled = True
 c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
+#config.bind('zb', 'config-cycle statusbar.show always never')
+#config.bind('zt', 'config-cycle tabs.show always never')
+# When to show the tab bar.
+# Type: String
+# Valid values:
+#   - always: Always show the tab bar.
+#   - never: Always hide the tab bar.
+#   - multiple: Hide the tab bar if only one tab is open.
+#   - switching: Show the tab bar when switching tabs.
 c.tabs.show = 'switching'
-config.bind('zb', 'config-cycle statusbar.show always never')
-config.bind('zt', 'config-cycle tabs.show always never')
+c.content.images = False
 
 #### Unbind 
 config.unbind('<Ctrl-PgUp>',mode='normal')
@@ -50,7 +58,8 @@ config.bind('u', 'scroll-page 0 -0.5', mode='normal')
 config.bind('x', 'tab-close')
 config.bind('t', 'open -t')
 config.bind('h', 'back', mode='normal')
-config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('<Shift-I>', 'set content.images true ;; reload')
+config.bind(',q', 'hint links spawn mpv {hint-url}')
 
 
 
