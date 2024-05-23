@@ -41,7 +41,7 @@ $il nvidia nvidia-libs-32bit
 $il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi unzip tar
 
 #PARA COMPILAR(OPCIONAL)
-$il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtools ncurses-devel pkg-config python3-virtualenv python3-pip ripgrep libnotify android-tools 
+$il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtools ncurses-devel pkg-config python3-virtualenv python3-pip ripgrep dunst libnotify android-tools 
 
 #WORKSPACE
 $il lxde
@@ -50,10 +50,10 @@ $il lxde
 $il pulsemixer wireplumber pipewire rtkit 
 
 #USER APP
-$il kitty timeshift keepassxc
+$il xfce4-terminal timeshift keepassxc
 
 #FONTS, BROWSER AND OTHERS
-$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	qutebrowser 
+$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	firefox
 
 #FONT FIX
 $s ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/

@@ -37,8 +37,8 @@
     <primaryMonitor/>
   </placement>
   <theme>
-    <name>Simply_Circles_Dark</name>
-    <titleLayout>NLIMC</titleLayout>
+    <name>Plata-Noir</name>
+    <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -53,38 +53,38 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
-      <size>10</size>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
       <name>sans</name>
-      <size>10</size>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
-      <size>10</size>
+      <name>Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
-      <size>10</size>
+      <name>Sans</name>
+      <size>8</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="OnScreenDisplay">
@@ -250,68 +250,38 @@
         <to>5</to>
       </action>
     </keybind>
-
     <keybind key="W-S-1">
       <action name="SendToDesktop">
         <to>1</to>
       </action>
     </keybind>
-
     <keybind key="W-S-2">
       <action name="SendToDesktop">
         <to>2</to>
       </action>
     </keybind>
-
     <keybind key="W-S-3">
       <action name="SendToDesktop">
         <to>3</to>
       </action>
     </keybind>
-
     <keybind key="W-S-4">
       <action name="SendToDesktop">
         <to>4</to>
       </action>
     </keybind>
-
     <keybind key="W-S-5">
       <action name="SendToDesktop">
         <to>5</to>
       </action>
     </keybind>
-
-          <keybind key="W-S-w">
-        <action name="MaximizeFull"/>
-      </keybind>
-      
-      <keybind key="W-S-s">
-        <action name="Unmaximize"/>
-      </keybind>
-
-      <keybind key="W-w">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeHorizontal"/>
-      <action name="MoveResizeTo">
-        <width>100%</width>
-        <height>50%</height>
-        <x>0</x>
-        <y>0</y>
-      </action>
+    <keybind key="W-w">
+      <action name="MaximizeFull"/>
     </keybind>
-
     <keybind key="W-s">
-      <action name="UnmaximizeFull"/>
-      <action name="MaximizeHorizontal"/>
-      <action name="MoveResizeTo">
-        <width>100%</width>
-        <height>50%</height>
-        <x>0</x>
-        <y>-0</y>
-      </action>
+      <action name="Unmaximize"/>
     </keybind>
-
-     <keybind key="W-a">
+    <keybind key="W-a">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -320,7 +290,6 @@
         <y>0</y>
       </action>
     </keybind>
-
     <keybind key="W-d">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -330,7 +299,6 @@
         <y>0</y>
       </action>
     </keybind>
-
     <keybind key="W-S-z">
       <action name="ToggleShowDesktop"/>
     </keybind>
@@ -348,7 +316,7 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-       <!-- Keybindings for rofi  -->
+    <!-- Keybindings for rofi  -->
     <keybind key="W-S-d">
       <action name="Execute">
         <command>rofi -show drun</command>
@@ -399,13 +367,19 @@
     <!-- Keybinding for kitty  -->
     <keybind key="W-Return">
       <action name="Execute">
-        <command>prime-run kitty</command>
+        <command>xfce4-terminal</command>
       </action>
     </keybind>
     <!-- open chromium -->
     <keybind key="W-S-b">
       <action name="Execute">
-        <command>chromium</command>
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for lxsession logout  -->
+    <keybind key="W-S-x">
+      <action name="Execute">
+        <command>lxsession-logout</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
