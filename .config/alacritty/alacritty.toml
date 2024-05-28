@@ -1,5 +1,5 @@
 [shell]
-program               = "/usr/bin/bash"
+program               = "/usr/bin/zsh"
 # args                  = [ "--login", ]
 
 #working_directory     = "None"
@@ -14,7 +14,7 @@ program               = "/usr/bin/bash"
 position              = { x = 0, y = 0 }
 padding               = { x = 10, y = 10 }
 #dynamic_padding       = true
-decorations           = "None"
+decorations           = "Full"
 opacity               = 1.0
 #blur                  = true
 #startup_mode          = "Windowed"
