@@ -12,6 +12,11 @@ configuration {
 	location: 0;
 	font: "Hack Regular 9";	
 	display-drun: "[Search]";
+	/* custom rofi keybindings */
+    	kb-mode-next: "Super+l";
+    	kb-mode-previous: "Super+h";
+	kb-row-down: "Super+j";
+	kb-row-up: "Super+k";
 }
 
 window { 

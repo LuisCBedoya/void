@@ -56,7 +56,7 @@ $il pulseaudio
 $il python3-pip python3-virtualenv
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc qutebrowser 
+$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc
 
 #FONTS, BROWSER AND OTHERS
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
@@ -70,7 +70,7 @@ $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
 #$il openbox obconf
 
 #LIBS PARA JUEGOS(OPCIONAL)
-#$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
+$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
 
 #FONT FIX
 $s ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
