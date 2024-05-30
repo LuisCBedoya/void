@@ -44,7 +44,7 @@ $il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wge
 $il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
 #NVIDIA
-$il nvidia
+$il nvidia nvidia-libs-32bit
 
 #AUDIO 
 $il pulseaudio 
