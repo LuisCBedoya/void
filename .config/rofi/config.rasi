@@ -15,8 +15,8 @@ configuration {
 	/* custom rofi keybindings */
     	kb-mode-next: "Super+l";
     	kb-mode-previous: "Super+h";
-	kb-row-down: "Super+j";
-	kb-row-up: "Super+k";
+	kb-row-down: "<Control>n";
+	kb-row-up: "<Control>p";
 }
 
 window { 
@@ -74,27 +74,14 @@ entry {
 	margin: 0 -2 0 0;
 }
 
-inputbar {
-	background-image: url("/home/luc/Imágenes/wall-02.jpg", width);
-	padding: 180 0 0;
-	margin: 0 0 0 0;
-} 
+/* inputbar { */
+/* 	background-image: url("/home/luc/.local/share/wallpapers/as.png", width); */
+/* 	padding: 180 0 0; */
+/* 	margin: 0 0 0 0; */
+/* }  */
 
 prompt {
 	text-color: #FFF;
 	padding: 10 6 0 10;
 	margin: 0 -2 0 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

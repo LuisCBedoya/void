@@ -4,7 +4,7 @@
 
 POLL_INTERVAL=120    # seconds at which to check battery level
 LOW_BAT=10           # lesser than this is considered low battery
-FULL_BAT=80
+FULL_BAT=60
 # If BAT0 doesn't work for you, check available devices with command below
 #
 #   $ ls -1 /sys/class/power_supply/

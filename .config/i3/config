@@ -2,18 +2,19 @@
 set $mod Mod4
 
 #Font para i3
-font pango:monospace 8
+font pango:Hack Regular 8
 
 # ocultar titulo de las ventanas 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 default_border pixel 0
 
 
 #i3 lock 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+bindsym $mod+x exec /home/luc/config/i3/lock
 
 #wallpaper 
-exec --no-startup-id feh --bg-fill /home/luc/.local/share/wallpapers/void.png
+exec --no-startup-id feh --bg-fill feh --bg-fill /home/luc/.local/share/wallpapers/wall.png
 
 #polkit
 exec --no-startup-id /usr/libexec/xfce-polkit
@@ -50,17 +51,17 @@ floating_modifier $mod
 
 
 # Iniciar terminal 
-bindsym $mod+Return exec "xfce4-terminal"
+bindsym $mod+Return exec "alacritty"
 # screenshot
 bindsym $mod+shift+s exec "flameshot gui"
 #passwd manager
-bindsym $mod+shift+p exec "keepassxc"
+bindsym $mod+shift+p exec "pcmanfm"
 #abrir browser
-bindsym $mod+Shift+b exec "chromium"
+bindsym $mod+Shift+b exec "firefox"
 #abrir vscode-oss
 bindsym $mod+Shift+v exec "codium"
 #abrir gestor de archivos
-bindsym $mod+Shift+f exec "pcmanfm"
+#bindsym $mod+Shift+f exec "pcmanfm"
 #imagenes
 bindsym $mod+Shift+i exec "ristretto"
 #telegram
@@ -112,8 +113,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 #nonbres de los espacios de trabajo
-# set $ws1 "一"
-# set $ws2 "二"
+# set $ws1 "term"
+# set $ws2 "www"
 # set $ws3 "三"
 # set $ws4 "四"
 # set $ws5 "五"
@@ -121,7 +122,7 @@ bindsym $mod+a focus parent
 # set $ws7 "七"
 # set $ws8 "八"
 # set $ws9 "九"
-# set $ws10 "十"
+# set $ws10"十"
 
 set $ws1 "1"
 set $ws2 "2"
@@ -191,11 +192,19 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status 
         #position top
+	colors {
+		background #0b0c0d
+		statusline #ffffff
+#		focused_workspace  #ffffff #285577
+#		active_workspace   #ffffff #333333
+#		inactive_workspace #888888 #222222
+#		urgent_workspace   #ffffff #900000
+    }
 }
-client.focused #6f8292 #4d5d66 #6f8292 #4d5d66
+client.focused #0bc0c0d #4d5d66 #0bc0c0d #4d5d66
 
 gaps outer 0
-gaps inner 0
+gaps inner 5
 #smart_gaps on
 
 bindsym $mod+plus gaps inner current plus 5
