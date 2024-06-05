@@ -31,6 +31,9 @@ $s xbps-install -Sy
 $il void-repo-{nonfree,multilib,multilib-nonfree}
 $s xbps-install -Sy
 
+#MINIMAL XORG
+$il xorg-minimal xorg-fonts xorg-video-drivers
+
 #INTEL (export LIBVA_DRIVER_NAME=i965) (export LIBVA_DRIVER_NAME=iHD)
 $il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
