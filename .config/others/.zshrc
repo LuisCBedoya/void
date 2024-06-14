@@ -1,13 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="minimal"
+ZSH_THEME="cypher"
 
-bindkey '^[h' backward-kill-word
+bindkey '^n' backward-kill-word
 bindkey '^d' forward-word
 bindkey '^[k' up-line-or-search
 bindkey '^[j' down-line-or-search
-bindkey '^N' backward-delete-char
-
 
 plugins=(git
 	sudo)
@@ -15,7 +13,7 @@ plugins=(git
 source $ZSH/oh-my-zsh.sh
 
 ## Options section
-setopt correct                                                  # Auto correct mistakes
+unsetopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
@@ -67,8 +65,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source /usr/share/fzf/completion.zsh
 
 #exports
-export LIBVA_DRIVER_NAME=iHD
-export PATH=$PATH:/usr/lib/jvm/jdk-17-oracle-x64/bin/
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export LIBVA_DRIVER_NAME=i965
+# export PATH=$PATH:/usr/lib/jvm/jdk-17-oracle-x64/bin/

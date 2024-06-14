@@ -47,23 +47,23 @@ $il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-drive
 $il nvidia nvidia-libs-32bit
 
 #AUDIO 
-$il pulseaudio 
+# $il pulseaudio 
 
 #AUDIO 
-#$il pulsemixer wireplumber pipewire rtkit
+$il pulsemixer wireplumber pipewire rtkit
 
 #PYHTON TOOLS
 $il python3-pip python3-virtualenv
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc
+$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc gpicview mpv
 
 #FONTS, BROWSER AND OTHERS
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
 
 #WORKSPACE
 #i3
-#$il i3-gaps i3status 
+$il i3-gaps i3status 
 #dwm
 #$il libX11-devel libXft-devel libXinerama-devel
 #Openbox
@@ -96,9 +96,9 @@ echo -e '#autostart
 \nexec dbus-run-session i3'> $HOME/.xinitrc 
 
 #PIPEWIRE_CONFIG
-#$s mkdir -p /etc/pipewire/pipewire.conf.d
-#$s ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
-#$s ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
+$s mkdir -p /etc/pipewire/pipewire.conf.d
+$s ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/
+$s ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/
 
 ###
 clear
