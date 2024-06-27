@@ -35,19 +35,16 @@ $s xbps-install -Sy
 $il xorg-minimal xorg-fonts xorg-video-drivers 
 
 #COMPILAR(OPCIONAL)
-$il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtools ncurses-devel pkg-config
+$il base-devel git 
 
 #BASE
-$il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi 
+$il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget sysfsutils libavcodec ffmpeg
 
 #INTEL (export LIBVA_DRIVER_NAME=i965) (export LIBVA_DRIVER_NAME=iHD)
-$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
+$il mesa-intel-dri libva-intel-driver vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
 #NVIDIA
 $il nvidia nvidia-libs-32bit
-
-#AUDIO 
-# $il pulseaudio 
 
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit
@@ -56,7 +53,7 @@ $il pulsemixer wireplumber pipewire rtkit
 $il python3-pip python3-virtualenv
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc gpicview mpv
+$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc gpicview mpv vlc 
 
 #FONTS, BROWSER AND OTHERS
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
