@@ -34,29 +34,29 @@ $s xbps-install -Sy
 #MINIMAL XORG
 $il xorg-minimal xorg-fonts xorg-video-drivers
 
+#BASE
+$il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget sysfsutils libavcodec ffmpeg
+
+#PARA COMPILAR(OPCIONAL)
+$il base-devel git python3-virtualenv python3-pip ripgrep dunst libnotify 
+
 #INTEL (export LIBVA_DRIVER_NAME=i965) (export LIBVA_DRIVER_NAME=iHD)
-$il mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
+$il mesa-intel-dri libva-intel-driver vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
 
 #NVIDIA
 $il nvidia nvidia-libs-32bit
 
-#BASE
-$il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget dialog mtools dosfstools nss-mdns avahi unzip tar
-
-#PARA COMPILAR(OPCIONAL)
-$il base-devel git pkg-config openssl-devel libtool autoconf automake cmake xtools ncurses-devel pkg-config python3-virtualenv python3-pip ripgrep dunst libnotify android-tools 
-
-#WORKSPACE
-$il lxde
+#LIBS PARA JUEGOS(OPCIONAL)
+$il libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit freetype-32bit vulkan-loader-32bit
 
 #AUDIO 
 $il pulsemixer wireplumber pipewire rtkit 
 
-#USER APP
-$il xfce4-terminal timeshift keepassxc
+#WORKSPACE
+$il lxde
 
-#FONTS, BROWSER AND OTHERS
-$il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra	firefox
+#USER APP
+$il alacritty keepassxc
 
 #FONT FIX
 $s ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
