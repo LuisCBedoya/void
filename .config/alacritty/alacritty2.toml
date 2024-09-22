@@ -11,7 +11,7 @@ shape = "Block"
 blinking = "On"
 
 [font]
-size = 9
+size = 10
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -38,10 +38,14 @@ mods = "Control"
 history = 10000
 multiplier = 3
 
+[font.offset]
+x = 0
+y = 0
+
 [window]
 dynamic_title = true
-opacity               = 0.8
-blur                  = true
+opacity               = 1.0
+blur                  = false
 
 [window.class]
 general = "Alacritty"
@@ -52,7 +56,7 @@ x = 10
 y = 10
 
 [colors.primary]
-background            = "#0b0c0d"
+background            = "#000000"
 foreground            = "#FFFFFF"
 dim_foreground        = "#CDD6F4"
 bright_foreground     = "#CDD6F4"
