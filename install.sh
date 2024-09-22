@@ -55,6 +55,9 @@ $il python3-pip python3-virtualenv
 #USER PACKAGES
 $il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc gpicview mpv vlc nvtop
 
+#ytfzf
+#$il ueberzug jq fzf yt-dlp
+
 #FONTS, BROWSER AND OTHERS
 $il noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
 
