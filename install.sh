@@ -41,7 +41,7 @@ $il base-devel git
 $il dbus elogind xsetroot xdo setxkbmap at-spi2-core p7zip gvfs ntfs-3g curl wget sysfsutils libavcodec ffmpeg
 
 #INTEL (export LIBVA_DRIVER_NAME=i965) (export LIBVA_DRIVER_NAME=iHD)
-$il mesa-intel-dri libva-intel-driver vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel
+$il mesa-intel-dri libva-intel-driver vulkan-loader mesa-vulkan-intel intel-video-accel intel-media-driver linux-firmware-intel xf86-video-intel
 
 #NVIDIA
 $il nvidia nvidia-libs-32bit
