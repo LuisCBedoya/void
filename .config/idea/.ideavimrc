@@ -64,6 +64,7 @@ xnoremap <A-k> :action MoveLineUp<CR>
 nnoremap <leader>h :action ShowHoverInfo<CR>
 nnoremap <leader>e :action ShowErrorDescription<CR>
 nnoremap <leader>j :action EditorJoinLines<CR>
+xnoremap <leader>j :action EditorJoinLines<CR>
 
 " ##### code navigation
 nnoremap gi :action GotoImplementation<CR>
