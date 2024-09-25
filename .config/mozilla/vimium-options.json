@@ -1,0 +1,7 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nunmap J\nunmap K",
+  "scrollStepSize": 50,
+  "smoothScroll": false,
+  "settingsVersion": "2.1.2",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0eb5b),\n  color-stop(100%,#f0eb5b));\nborder: 1px solid #f0eb5b;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
