@@ -1,0 +1,240 @@
+{
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "editor.tabSize": 2,
+  "workbench.startupEditor": "none",
+  "editor.cursorBlinking": "blink",
+  "editor.minimap.enabled": false,
+  "editor.selectionHighlight": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "onlySnippets",
+  "workbench.sideBar.location": "left",
+  "workbench.editor.showTabs": "multiple",
+  "editor.lineNumbers": "relative",
+  "workbench.activityBar.location": "default",
+  "editor.guides.indentation": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "workbench.statusBar.visible": true,
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+  "breadcrumbs.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.glyphMargin": true,
+  "explorer.autoReveal": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.wordWrap": "on",
+  "workbench.enableExperiments": false,
+  "workbench.editor.enablePreview": false,
+  "editor.fastScrollSensitivity": 1,
+  "editor.smoothScrolling": false,
+  "editor.scrollBeyondLastLine": true,
+  "editor.renderControlCharacters": false,
+  "search.useIgnoreFiles": false,
+  "search.useGlobalIgnoreFiles": false,
+  "editor.hover.delay": 0,
+  "editor.hover.enabled": false,
+  "editor.suggest.showStatusBar": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.parameterHints.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "window.menuBarVisibility": "compact",
+  "telemetry.telemetryLevel": "off",
+  "vim.foldfix": true,
+  "vim.leader": "<space>",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["t"],
+      "after": ["%"]
+    },
+    {
+      "before": ["v"],
+      "after": ["V"]
+    },
+    {
+      "before": ["J"],
+      "after": ["}"]
+    },
+    {
+      "before": ["K"],
+      "after": ["{"]
+    },
+    // open terminal
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.new"]
+    },
+    // ##### navegation
+    {
+      "before": ["s", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["s", "s"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["s", "h"],
+      "commands": ["workbench.action.navigateLeft"]
+    },
+    {
+      "before": ["s", "l"],
+      "commands": ["workbench.action.navigateRight"]
+    },
+    {
+      "before": ["s", "k"],
+      "commands": ["workbench.action.navigateUp"]
+    },
+    {
+      "before": ["s", "j"],
+      "commands": ["workbench.action.navigateDown"]
+    },
+    {
+      "before": ["s", "l"],
+      "commands": ["workbench.action.navigateRight"]
+    },
+    {
+      "before": ["<Tab>"],
+      "commands": ["workbench.action.nextEditorInGroup"]
+    },
+    {
+      "before": ["<S-Tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "Q"],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // ##### code interactions
+    {
+      "before": ["<leader>", "c", "l"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "f", "r"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "r", "e"],
+      "commands": ["editor.action.refactor"]
+    },
+    // ##### code information
+    {
+      "before": ["<leader>", "h"],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": [
+        {
+          "command": "editor.action.showHover",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "after": ["J"]
+    },
+    // ##### code navigation
+    {
+      "before": ["g", "i"],
+      "commands": [
+        {
+          "command": "editor.action.revealDefinition"
+        }
+      ]
+    },
+    // ##### debugging
+    {
+      "before": ["d", "b"],
+      "commands": [
+        {
+          "command": "editor.debug.action.toggleBreakpoint"
+        }
+      ]
+    },
+    {
+      "before": ["d", "c"],
+      "commands": [
+        {
+          "command": "workbench.action.debug.continue"
+        }
+      ]
+    },
+    {
+      "before": ["d", "s"],
+      "commands": [
+        {
+          "command": "workbench.action.debug.stop"
+        }
+      ]
+    },
+    // ##### menu
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"],
+      "silent": true
+    },
+
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["t"],
+      "after": ["%"]
+    },
+    {
+      "before": ["J"],
+      "after": ["}"]
+    },
+    {
+      "before": ["K"],
+      "after": ["{"]
+    },
+    // ##### code interactions
+    {
+      "before": ["leader", "c"],
+      "commands": ["editor.action.blockComment"]
+    },
+    // ##### code information
+    {
+      "before": ["<leader>", "j"],
+      "after": ["J"]
+    }
+  ]
+}

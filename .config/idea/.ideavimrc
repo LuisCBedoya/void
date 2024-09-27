@@ -46,11 +46,11 @@ nnoremap <leader>cl :action CommentByLineComment<CR>
 xnoremap <leader>cl :action CommentByBlockComment<CR>
 nnoremap <leader>rn :action RenameElement<CR>
 nnoremap <leader>fr :action ReformatCode<CR>
-" nnoremap <leader>re :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>re :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>su :action ShowUsages<CR>
 nnoremap <leader>sU :action FindUsages<CR>
-nnoremap <A-m> :action CollapseRegion<CR>
-nnoremap <A-n> :action ExpandRegion<CR>
+nnoremap <A-n> :action CollapseRegion<CR>
+nnoremap <A-m> :action ExpandRegion<CR>
 nnoremap <A-a> :action CollapseAllRegions<CR>
 nnoremap <A-s> :action ExpandAllRegions<CR>
 
