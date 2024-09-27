@@ -137,6 +137,11 @@
     "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
   },
+  {
+    "key": "ctrl+[Period]",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
   // enable
   {
     "key": "ctrl+shift+q",

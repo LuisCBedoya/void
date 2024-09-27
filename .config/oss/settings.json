@@ -5,54 +5,75 @@
   "editor.fontWeight": "500",
   "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "editor.tabSize": 2,
+  "editor.detectIndentation": true,
   "workbench.startupEditor": "none",
-  "editor.cursorBlinking": "blink",
+  "editor.cursorBlinking": "expand",
   "editor.minimap.enabled": false,
-  "editor.selectionHighlight": false,
+  "editor.selectionHighlight": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "onlySnippets",
   "workbench.sideBar.location": "left",
   "workbench.editor.showTabs": "multiple",
   "editor.lineNumbers": "relative",
-  "workbench.activityBar.location": "default",
-  "editor.guides.indentation": true,
+  "workbench.activityBar.location": "hidden",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": false,
   "workbench.statusBar.visible": true,
   "editor.linkedEditing": true,
   "editor.guides.bracketPairs": true,
   "breadcrumbs.enabled": true,
-  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.glyphMargin": true,
-  "explorer.autoReveal": false,
-  "editor.stickyScroll.enabled": true,
+  "explorer.autoReveal": true,
+  "editor.stickyScroll.enabled": false,
   "editor.wordWrap": "on",
   "workbench.enableExperiments": false,
-  "workbench.editor.enablePreview": false,
-  "editor.fastScrollSensitivity": 1,
-  "editor.smoothScrolling": false,
-  "editor.scrollBeyondLastLine": true,
+  "workbench.editor.enablePreview": true,
+  "editor.fastScrollSensitivity": 5,
+  "editor.smoothScrolling": true,
+  "editor.scrollBeyondLastLine": false,
   "editor.renderControlCharacters": false,
   "search.useIgnoreFiles": false,
+  "editor.showFoldingControls": "mouseover",
+  "editor.showUnused":true,
+  // "editor.snippetSuggestions":"inline",
+  "editor.stablePeek":false,
+  "editor.codeLens":false,
   "search.useGlobalIgnoreFiles": false,
   "editor.hover.delay": 0,
   "editor.hover.enabled": false,
   "editor.suggest.showStatusBar": true,
-  "editor.lightbulb.enabled": "off",
+  "editor.lightbulb.enabled": "onCode",
   "editor.parameterHints.enabled": true,
+  "window.menuBarVisibility": "toggle",
+  "editor.renderWhitespace": "boundary",
+  "editor.roundedSelection": true,
+  "editor.occurrencesHighlight": "multiFile",
+  "editor.multiCursorPaste": "spread",
+  // "editor.multiCursorModifier":"ctrlCmd",
+  "editor.parameterHints.cycle": true,
+  "editor.overviewRulerBorder": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.renderLineHighlight": "line",
+  "editor.renderFinalNewline": "off",
   "editor.quickSuggestions": {
-    "other": true,
     "comments": false,
+    "other": true,
     "strings": false
   },
+  "editor.quickSuggestionsDelay": 10,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
+    "source.organizeImports": "always",
+    "source.sortImports": "always",
+    "source.fixAll": "always"
   },
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
-  "window.menuBarVisibility": "compact",
   "telemetry.telemetryLevel": "off",
   "vim.foldfix": true,
   "vim.leader": "<space>",
@@ -162,8 +183,7 @@
       "before": ["<leader>", "e"],
       "commands": [
         {
-          "command": "editor.action.showHover",
-          "when": "editorTextFocus"
+          "command": "workbench.action.showErrorsWarnings"
         }
       ]
     },
@@ -211,7 +231,20 @@
       "commands": ["workbench.action.quickOpen"],
       "silent": true
     },
-
+    {
+      "before": ["<leader>", "f", "m"],
+      "commands": [
+        {
+          "command": "editor.action.quickFix",
+          "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+        }
+      ]
+    },
+    {
+      "before": ["<C-Space>"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -235,6 +268,24 @@
     {
       "before": ["<leader>", "j"],
       "after": ["J"]
+    },
+    {
+      "before": ["<leader>", "r", "e"],
+      "commands": ["editor.action.refactor"]
+    },
+    {
+      "before": ["<leader>", "f", "m"],
+      "commands": [
+        {
+          "command": "editor.action.quickFix",
+          "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+        }
+      ]
+    },
+    {
+      "before": ["<C-Space>"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
     }
   ]
 }
