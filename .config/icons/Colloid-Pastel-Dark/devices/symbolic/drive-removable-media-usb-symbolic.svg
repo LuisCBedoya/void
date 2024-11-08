@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="svg16"
+   sodipodi:docname="drive-removable-media-usb-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="8.2369336"
+     inkscape:cx="-26.223351"
+     inkscape:cy="25.616329"
+     inkscape:window-width="1920"
+     inkscape:window-height="1021"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <g
+     id="layer1"
+     transform="matrix(1.3333333,0,0,1.3333333,-501.59405,-719.93705)"
+     style="stroke-width:0;stroke-dasharray:none">
+    <g
+       id="16-16-device-notifier"
+       style="stroke-width:0;stroke-dasharray:none" />
+  </g>
+  <g
+     id="layer1-3"
+     transform="matrix(0.57142857,0,0,0.57142857,-184.57143,-303.63428)"
+     style="stroke-width:1.75">
+    <g
+       id="device-notifier"
+       style="stroke-width:1.75">
+      <path
+         id="rect4196"
+         class="ColorScheme-Text"
+         transform="translate(321,529.36)"
+         d="M 9,2 V 16 H 7 V 30 H 25 V 16 H 23 V 2 Z m 1,3 h 2 v 8 h -2 z m 10,0 h 2 v 8 h -2 z m -7,3 h 2 v 5 h -2 z m 4,0 h 2 v 5 H 17 Z M 8,17 H 24 V 29 H 8 Z m 8,1 -2,2 h 4 z m -6,7 v 1 h 12 v -1 z m 1,2 v 1 h 10 v -1 z"
+         style="color:#edeceb;fill:#dedede;fill-opacity:1;stroke-width:1.75" />
+    </g>
+  </g>
+</svg>

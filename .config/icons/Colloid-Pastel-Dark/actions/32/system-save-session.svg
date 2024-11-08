@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 32 32"
+   id="svg2255"
+   sodipodi:docname="system-save-session.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2257"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="26.9375"
+     inkscape:cx="13.587007"
+     inkscape:cy="16"
+     inkscape:window-width="1920"
+     inkscape:window-height="1021"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2255" />
+  <defs
+     id="defs2241">
+    <style
+       id="current-color-scheme"
+       type="text/css">.ColorScheme-Text {
+        color:#9fbac6;
+      }</style>
+  </defs>
+  <path
+     d="M 16,1 A 15,15 0 0 0 1,16 15,15 0 0 0 16,31 15,15 0 0 0 31,16 15,15 0 0 0 16,1 Z m 0,1.5 A 13.5,13.5 0 0 1 29.5,16 13.5,13.5 0 0 1 16,29.5 13.5,13.5 0 0 1 2.5,16 13.5,13.5 0 0 1 16,2.5 Z"
+     fill-rule="evenodd"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path2245"
+     style="fill:#9fbac6;stroke-width:0.816496;fill-opacity:1" />
+  <g
+     transform="matrix(1.7461559,0,0,1.7461559,-11.938247,-7.5731179)"
+     fill-rule="evenodd"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="g2253"
+     style="stroke-width:0.467597;fill:#9fbac6;fill-opacity:1">
+    <rect
+       x="15.5"
+       y="9"
+       width="1"
+       height="9"
+       rx="0.5"
+       ry="0.5"
+       stroke-width="0.518012"
+       id="rect2247"
+       style="fill:#9fbac6;fill-opacity:1" />
+    <rect
+       transform="rotate(-45)"
+       x="-1.5607001"
+       y="17.187"
+       width="1"
+       height="7"
+       rx="0.5"
+       ry="0.5"
+       stroke-width="0.456844"
+       id="rect2249"
+       style="fill:#9fbac6;fill-opacity:1" />
+    <rect
+       transform="matrix(-0.70711,-0.70711,-0.70711,0.70711,0,0)"
+       x="-24.188"
+       y="-5.4400001"
+       width="1"
+       height="7"
+       rx="0.5"
+       ry="0.5"
+       stroke-width="0.456844"
+       id="rect2251"
+       style="fill:#9fbac6;fill-opacity:1" />
+  </g>
+</svg>

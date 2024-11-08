@@ -53,7 +53,7 @@ $il pulsemixer wireplumber pipewire rtkit
 $il python3-pip python3-virtualenv
 
 #USER PACKAGES
-$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift pcmanfm htop xfce-polkit keepassxc gpicview mpv vlc nvtop
+$il lxappearance neovim dunst libnotify ripgrep flameshot timeshift Thunar htop xfce-polkit keepassxc gpicview mpv vlc nvtop
 
 #ytfzf
 #$il ueberzug jq fzf yt-dlp

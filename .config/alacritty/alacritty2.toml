@@ -1,5 +1,9 @@
-[shell]
-program               = "/usr/bin/bash"
+[general]
+import = [
+    "~/.config/alacritty/colorshemes/vesper.toml"
+]
+[terminal]
+shell               = "/usr/bin/bash"
 # args                  = [ "--login", ]
 
 [cursor]
@@ -7,7 +11,7 @@ blink_interval = 500
 blink_timeout = 0
 
 [cursor.style]
-shape = "Block"
+shape = "Beam"
 blinking = "On"
 
 [font]
@@ -29,10 +33,11 @@ style = "Regular Italic"
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-[[keyboard.bindings]]
-chars = "\u0017"
-key = "Back"
-mods = "Control"
+#[[keyboard.bindings]]
+#chars = "\u0017"
+#key = "Back"
+#mods = "Control"
+
 
 [scrolling]
 history = 10000
@@ -55,8 +60,12 @@ instance = "Alacritty"
 x = 10
 y = 10
 
-[colors.primary]
-background            = "#000000"
-foreground            = "#FFFFFF"
-dim_foreground        = "#CDD6F4"
-bright_foreground     = "#CDD6F4"
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "U", mods = "Control|Shift", action = "ScrollPageUp" },
+  { key = "D", mods = "Control|Shift", action = "ScrollPageDown" },
+]
+
