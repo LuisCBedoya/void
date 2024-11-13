@@ -1,7 +1,7 @@
 @theme "/dev/null"
 
 * {
-	bg: #191716;
+	bg: #1a1a1a;
 	background-color: @bg;
 }
 
