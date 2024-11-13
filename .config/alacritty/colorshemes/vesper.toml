@@ -2,7 +2,7 @@
 # Source https://github.com/raunofreiberg/vesper
 
 [colors.primary]
-background = '#101010'
+background = '#1a1a1a'
 foreground = '#ffffff'
 
 [colors.normal]
