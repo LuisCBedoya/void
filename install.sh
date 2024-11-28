@@ -88,12 +88,11 @@ $s rm -r /var/service/polkitd
 #xdg-user-dirs-update
 
 echo -e '#autostart
-\nif [ -d "$HOME/.local/bin" ] ; then
-\n    PATH="$HOME/.local/bin:$PATH"
-\nfi
-\npipewire &
+\nexport XDG_SESSION_TYPE=x11
+\nexport GDK_BACKEND=x11
 \nsetxkbmap latam &
-\nexec dbus-run-session i3'> $HOME/.xinitrc 
+\npipewire &
+\nexec dbus-run-session i3'> $HOME/.xinitrc
 
 #PIPEWIRE_CONFIG
 $s mkdir -p /etc/pipewire/pipewire.conf.d
