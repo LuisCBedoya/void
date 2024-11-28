@@ -13,13 +13,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 
-#keybindings
-bind '"\C-h": backward-kill-word'     
-#bind '"\C-d": forward-word'            
-bind '"\ek": history-search-backward'  
-bind '"\ej": history-search-forward'  
-bind '"\C-n": backward-delete-char'  
+bind '"\ek": history-search-backward'
+bind '"\ej": history-search-forward'
+bind '"\eh": beginning-of-line'
+bind '"\el": end-of-line'
+
+#alias ls='lsd --group-dirs first'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias fre='sudo fc-cache -f -v && fc-cache -f -v'
 
 shopt -s nocaseglob
-
 bind 'set completion-ignore-case on'
