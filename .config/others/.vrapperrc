@@ -1,0 +1,21 @@
+let mapleader=" "
+set ignorecase          
+set smartcase          
+set incsearch         
+set tabstop=4        
+set shiftwidth=4    
+
+:ino ( ()<ESC>i
+:ino [ []<ESC>i
+:ino jk <ESC>
+
+:nnoremap <A-1> :nohlsearch<CR>
+noremap <A-0> d$
+noremap t %
+vmap t %
+
+:nnoremap <A-k> :m .-2<CR>==
+:nnoremap <A-j> :m .+1<CR>==
+
+
+
