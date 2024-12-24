@@ -8,7 +8,7 @@ require('vscode').setup({
 
   -- Enable transparent background
   transparent = true,
-  terminal_colors = false,
+  terminal_colors = true,
 
   -- Enable italic comment
   italic_comments = false,

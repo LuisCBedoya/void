@@ -1,7 +1,6 @@
 local opts = { noremap = true, silent = true }
 local fopts = { noremap = false, silent = true }
 local keymap = vim.keymap.set
-local is_folded = false
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -25,29 +24,23 @@ keymap({ 'n', 't' }, '<C-Left>', '<C-w>h', opts)
 keymap({ 'n', 't' }, '<C-Down>', '<C-w>j', opts)
 keymap({ 'n', 't' }, '<C-Up>', '<C-w>k', opts)
 keymap({ 'n', 't' }, '<C-Right>', '<C-w>l', opts)
-keymap('v', 'ñ', '<gv', opts, { desc = 'pasar a la siguiente pestaña' })
-keymap('v', '<leader>ñ', '>gv', opts)
-keymap('n', '<leader>ñ', '>>', opts)
-keymap('n', 'ñ', '<<', opts, { desc = 'pasar a la siguiente pestaña' })
-
 keymap('n', 't', '%', opts, { desc = 'pasar a la siguiente pestaña' })
 keymap('v', 't', '%', opts, { desc = 'pasar a la siguiente pestaña' })
--- *** external plugins key ***
+-- *** comments plugins key ***
 keymap('n', '<leader>cl', 'gcc', { desc = '(comments-nvim) comentar linea', remap = true })
 keymap('v', '<leader>c', 'gc', { desc = '(comments-nvim) comentar bloque', remap = true })
-
 -- ui.bufferline
 keymap('n', '<Tab>', ':BufferLineCycleNext<CR>', opts, { desc = '(bufferL) pasar a la siguiente pestaña' })
 keymap('n', '<A-n>', ':BufferLineMovePrev<CR>', opts, { desc = '(bufferL) mover la pestaña hacia la izq' })
 keymap('n', '<A-m>', ':BufferLineMoveNext<CR>', opts, { desc = '(bufferL) mover la pestaña hacia la der' })
 keymap('n', '<A-p>', ':BufferLineTogglePin<CR>', opts, { desc = '(bufferL) pin pestaña' })
-
+-- telescope
 keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts, { desc = '(telescope) buscar archivos' })
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts, { desc = '(telescope) buscar coincidencias' })
 keymap('n', '<leader>fm', ':TodoTelescope<CR>', opts, { desc = '(telescope) buscar todos-comments' })
 keymap('n', '<leader>fk', '<cmd>Telescope keymaps<cr>', opts)
 keymap('n', '<leader>fn', '<Cmd>Telescope notify<CR>', opts)
-
+-- nvimtree
 keymap('n', '<A-n>', '<cmd>NvimTreeToggle<CR>', { desc = '(nvimtree) abrir tree' })
 vim.keymap.set('n', '<leader>e', function()
   if vim.fn.bufname():match('NvimTree_') then

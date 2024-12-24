@@ -11,9 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+
 local plugins = {
   -- *** ui ***
-  {
+    {
     'nvim-treesitter/nvim-treesitter',
     event = { 'BufRead', 'BufNewFile' },
     config = function()
@@ -75,95 +76,24 @@ local plugins = {
     end,
   },
   { 'nvim-lua/plenary.nvim' },
-  -- {
-  --   'Mofiqul/vscode.nvim',
-  --   name = 'vscode',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('plugins.ui.vscode-theme')
-  --   end,
-  -- },
   {
-    'EdenEast/nightfox.nvim',
-    name = 'nightfox',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     lazy = false,
     priority = 1000,
     config = function()
-      require('plugins.ui.nightfox')
+      require('plugins.ui.catppuccin-theme')
     end,
   },
-  -- *** tools ***
-  {
-    'terrortylor/nvim-comment',
-    event = { 'BufRead', 'BufNewFile' },
-    config = function()
-      require('plugins.tools.comment')
-    end,
-  },
-  {
-    'folke/todo-comments.nvim',
-    event = { 'BufReadPost', 'BufNewFile' },
-    config = function()
-      require('plugins.tools.todo')
-    end,
-  },
-  {
-    'lewis6991/gitsigns.nvim',
-    cond = function()
-      local git_dir = vim.fn.finddir('.git', '.;')
-      return git_dir ~= ''
-    end,
-    config = function()
-      require('plugins.tools.gitsigns')
-    end,
-  },
-  {
-    'L3MON4D3/LuaSnip',
-    version = 'v2.*',
-    build = 'make install_jsregexp',
-  },
-  { 'rafamadriz/friendly-snippets' },
-  {
+
+  -- tools
+    {
     'kyazdani42/nvim-tree.lua',
     cmd = { 'NvimTreeToggle', 'NvimTreeFocus' },
     config = function()
       require('plugins.ui.tree')
     end,
   },
-  --- *** dap ***
-  {
-    'mfussenegger/nvim-dap',
-    dependencies = {
-      'nvim-neotest/nvim-nio',
-    },
-    cmd = { 'DapToggleBreakpoint', 'DapContinue', 'DapStepOver', 'DapStepInto', 'DapStepOut', 'DapTerminate' },
-    config = function()
-      require('plugins.dap.dap')
-    end,
-  },
-  {
-    'SmiteshP/nvim-navic',
-  },
-  --- *** lsp ***
-  --- lsp.cmp
-  { 'hrsh7th/nvim-cmp' },
-  { 'hrsh7th/cmp-buffer' },
-  { 'hrsh7th/cmp-path' },
-  { 'hrsh7th/cmp-cmdline' },
-  { 'saadparwaiz1/cmp_luasnip' },
-  { 'hrsh7th/cmp-nvim-lsp' },
-
-  --- lsp.conform
-  { 'stevearc/conform.nvim' },
-
-  --- lsp.lsp-mason
-  { 'neovim/nvim-lspconfig' },
-  { 'nvimtools/none-ls.nvim' },
-  { 'williamboman/mason-lspconfig.nvim' },
-  { 'williamboman/mason.nvim' },
-  { 'jayp0521/mason-nvim-dap.nvim' },
-  { 'jayp0521/mason-null-ls.nvim' },
 }
 
 local opts = {

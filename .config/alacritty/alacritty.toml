@@ -1,75 +1,71 @@
-[shell]
-program               = "/usr/bin/zsh"
+[general]
+import = [
+    "~/.config/alacritty/colorshemes/vesper.toml"
+]
+[terminal]
+shell               = "/usr/bin/bash"
 # args                  = [ "--login", ]
 
-#working_directory     = "None"
-#live_config_reload    = true
-#ipc_socket            = true
-
-[env]
-#TERM                  = "xterm-256color"
-
-[window]
-#dimensions            = { columns = 0, lines = 0 }
-position              = { x = 0, y = 0 }
-padding               = { x = 10, y = 10 }
-#dynamic_padding       = true
-decorations           = "Full"
-opacity               = 1.0
-#blur                  = true
-#startup_mode          = "Windowed"
-#title                 = "Alacritty"
-#dynamic_title         = true
-#class                 = { instance = "Alacritty", general = "Alacritty" }
-#decorations_theme_variant = "None"
-#resize_increments     = false
-#option_as_alt         = "None"
-
-[scrolling]
-history               = 1000
-#multiplier            = 3
-
-[font]
-# normal                = { family = "Hack", style = "Regular" }
-# bold                  = { family = "Hack", style = "Bold" }
-# italic                = { family = "Hack", style = "Italic" }
-# bold_italic           = { family = "Hack", style = "Bold Italic" }
-normal.family = "FiraCode Nerd Font SemBd"
-size                  = 9
-offset                = { x = 0, y = 0 }
-glyph_offset          = { x = 0, y = 0 }
-#builtin_box_drawing   = true
-
-[colors.primary]
-background            = "#000000"
-foreground            = "#FFFFFF"
-# dim_foreground        = "#CDD6F4"
-# bright_foreground     = "#CDD6F4"
-
-[selection]
-#semantic_escape_chars = ",│‘|:"' ()[]{}<>t"
-save_to_clipboard     = true
+[cursor]
+blink_interval = 500
+blink_timeout = 0
 
 [cursor.style]
-shape                 = "Block"
-blinking              = "Always"
+shape = "Block"
+blinking = "On"
 
-[cursor.vi_mode_style]
-shape                 = "Block"
-blinking              = "Off"
+[font]
+size = 10
 
-[cursor]
-blink_interval        = 500
-blink_timeout         = 0
-#unfocused_hollow      = true
-#thickness             = 0.15
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
 
-[terminal]
-#osc52                 = "OnlyCopy"
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Regular Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+#[[keyboard.bindings]]
+#chars = "\u0017"
+#key = "Back"
+#mods = "Control"
+
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font.offset]
+x = 0
+y = 0
+
+[window]
+dynamic_title = true
+opacity               = 1.0
+blur                  = false
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 10
+y = 10
 
 [mouse]
-hide_when_typing      = true
+hide_when_typing = true
+
+[keyboard]
 bindings = [
-  { mouse = "Middle", action = "PasteSelection" },
+  { key = "U", mods = "Control|Shift", action = "ScrollPageUp" },
+  { key = "D", mods = "Control|Shift", action = "ScrollPageDown" },
 ]
 
