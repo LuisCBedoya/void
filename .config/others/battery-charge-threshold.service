@@ -1,0 +1,14 @@
+[Unit]
+Description=Establecer el umbral de carga de la batería
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 10      
+ExecStart=/bin/bash -c 'echo 80 > /sys/class/power_supply/BAT1/charge_control_end_threshold'  # Establecer umbral de carga
+RemainAfterExit=true            
+Restart=on-failure              
+RestartSec=5                    
+
+[Install]
+WantedBy=multi-user.target       
