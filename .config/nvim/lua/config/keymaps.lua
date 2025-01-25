@@ -5,6 +5,8 @@ local keymap = vim.keymap.set
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 -- *** user key ***
+vim.keymap.set("i", "<C-BS>", "<C-w>")
+vim.keymap.set("i", "<C-h>", "<C-w>")
 keymap('n', '<C-s>', '<cmd>w<CR>', opts)
 keymap('n', '<leader>x', '<cmd>bd<CR>', fopts)
 keymap('n', '<leader>Q', '<cmd>w<CR><cmd>q<CR>')

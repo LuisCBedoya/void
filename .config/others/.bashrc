@@ -10,6 +10,7 @@ bind '"\ek": history-search-backward'
 bind '"\ej": history-search-forward'
 bind '"\eh": beginning-of-line'
 bind '"\el": end-of-line'
+bind '"\C-H": backward-kill-word'
 
 #alias ls='lsd --group-dirs first'
 alias ..='cd ..'
