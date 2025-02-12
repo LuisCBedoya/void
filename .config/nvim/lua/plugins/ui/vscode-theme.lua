@@ -11,7 +11,7 @@ require('vscode').setup({
   terminal_colors = true,
 
   -- Enable italic comment
-  italic_comments = false,
+  italic_comments = true,
 
   -- Underline `@markup.link.*` variants
   underline_links = true,

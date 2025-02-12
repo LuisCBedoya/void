@@ -1,4 +1,4 @@
-local icons = require('plugins.ui.icons')
+local icons = require('plugins.ui.icons.icons')
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -11,26 +11,38 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 local plugins = {
-  -- *** ui ***
-    {
-    'nvim-treesitter/nvim-treesitter',
-    event = { 'BufRead', 'BufNewFile' },
+  -- ************************************** ui ******************************
+  --- ui.themes
+  {
+    'Mofiqul/vscode.nvim',
+    name = 'vscode',
+    lazy = false,
+    priority = 1000,
     config = function()
-      require('plugins.ui.treesitter')
+      require('plugins.ui.vscode-theme')
     end,
   },
-  { 'JoosepAlviste/nvim-ts-context-commentstring' },
+  --- ui.webicons
   {
     'nvim-tree/nvim-web-devicons',
     opts = function()
-      return { override = require('plugins.ui.devicons') }
+      return { override = require('plugins.ui.icons.devicons') }
     end,
     config = function(_, opts)
       require('nvim-web-devicons').setup(opts)
     end,
   },
+  --- ui.rainbow
+  { 'hiphish/rainbow-delimiters.nvim' },
+  --- ui.highlight-undo
+  {
+    'tzachar/highlight-undo.nvim',
+    config = function()
+      require('plugins.ui.highlight-undo')
+    end,
+  },
+  --- ui.autopairs
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
@@ -38,7 +50,7 @@ local plugins = {
       require('plugins.ui.autopairs')
     end,
   },
-  { 'hiphish/rainbow-delimiters.nvim' },
+  --- ui.colorizer
   {
     'norcalli/nvim-colorizer.lua',
     event = 'BufReadPre',
@@ -46,19 +58,40 @@ local plugins = {
       require('colorizer').setup()
     end,
   },
+  --- ui.indent-blankline
   {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
       require('plugins.ui.indent-blankline')
     end,
   },
+  --- ui.iluminate
   {
-    'nvim-lualine/lualine.nvim',
-    event = 'BufWinEnter',
+    'RRethy/vim-illuminate',
     config = function()
-      require('plugins.ui.lualine')
+      require('plugins.ui.iluminate')
     end,
   },
+  --- ui.barbecue
+  {
+    'utilyre/barbecue.nvim',
+    event = { 'BufEnter', 'FileType' },
+    config = function()
+      require('plugins.ui.barbecue')
+    end,
+  },
+  {
+    'SmiteshP/nvim-navic',
+  },
+  --- ui.nvimtree
+  {
+    'kyazdani42/nvim-tree.lua',
+    cmd = { 'NvimTreeToggle', 'NvimTreeFocus' },
+    config = function()
+      require('plugins.ui.nvimtree')
+    end,
+  },
+  --- ui.bufferline
   {
     'famiu/bufdelete.nvim',
   },
@@ -69,6 +102,15 @@ local plugins = {
     end,
     -- event = 'User FileOpened',
   },
+  --- ui.lualine
+  {
+    'nvim-lualine/lualine.nvim',
+    event = 'BufWinEnter',
+    config = function()
+      require('plugins.ui.lualine')
+    end,
+  },
+  --- ui.telescope
   {
     'nvim-telescope/telescope.nvim',
     config = function()
@@ -76,24 +118,157 @@ local plugins = {
     end,
   },
   { 'nvim-lua/plenary.nvim' },
+  --- ui.treesitter
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    lazy = false,
-    priority = 1000,
+    'nvim-treesitter/nvim-treesitter',
+    event = { 'BufRead', 'BufNewFile' },
     config = function()
-      require('plugins.ui.catppuccin-theme')
+      require('plugins.ui.treesitter')
     end,
   },
+  { 'JoosepAlviste/nvim-ts-context-commentstring' },
+  -- autotag
+  {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end,
+  },
+  -- ************************************** tools ******************************
+  --- tools.nvim-commets
+  {
+    'terrortylor/nvim-comment',
+    event = { 'BufRead', 'BufNewFile' },
+    config = function()
+      require('plugins.tools.comment')
+    end,
+  },
+  --- tools.cool-substitute
+  {
+    'otavioschwanck/cool-substitute.nvim',
+    event = { 'BufRead', 'BufNewFile' },
+    config = function()
+      require('cool-substitute').setup({
+        setup_keybindings = true,
+      })
+    end,
+  },
+  { 'nicwest/vim-camelsnek' },
+  --- tools.gitsgns
+  {
+    'lewis6991/gitsigns.nvim',
+    cond = function()
+      local git_dir = vim.fn.finddir('.git', '.;')
+      return git_dir ~= ''
+    end,
+    config = function()
+      require('plugins.tools.gitsigns')
+    end,
+  },
+  --- tools.move
+  {
+    'fedepujol/move.nvim',
+    event = { 'CursorHold', 'CursorMoved', 'InsertEnter', 'CmdlineEnter' },
+    config = function()
+      require('move').setup()
+    end,
+  },
+  --- tools.toggleterm
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    cmd = { 'ToggleTerm', 'TermExec' },
+    config = function()
+      require('plugins.tools.toggleterm')
+    end,
+  },
+  --- tools.neogen
+  {
+    'danymat/neogen',
+    cmd = { 'Neogen' },
+    config = function()
+      require('neogen').setup({ snippet_engine = 'luasnip' })
+    end,
+  },
+  --- tools.snippets
+  {
+    'L3MON4D3/LuaSnip',
+    version = 'v2.*',
+    build = 'make install_jsregexp',
+  },
+  { 'rafamadriz/friendly-snippets' },
+  --- tools.todo
+  {
+    'folke/todo-comments.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
+    config = function()
+      require('plugins.tools.todo')
+    end,
+  },
+  --- tools.database
+  {
+    'kristijanhusak/vim-dadbod-ui',
+    cmd = { 'DBUIToggle', 'DBUIAddConnection', 'DBUI', 'DBUIFindBuffer', 'DBUIRenameBuffer' },
+    dependencies = {
+      'tpope/vim-dadbod',
+      'kristijanhusak/vim-dadbod-completion',
+      'tpope/vim-dotenv',
+    },
+    config = function()
+      require('plugins.tools.database')
+    end,
+  },
+  --- tools.jdtls
+  { 'mfussenegger/nvim-jdtls' },
+  -- ************************************** dap ******************************
+  --- dap.nvim-dap
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = {
+      'nvim-neotest/nvim-nio',
+    },
+    cmd = { 'DapToggleBreakpoint', 'DapContinue', 'DapStepOver', 'DapStepInto', 'DapStepOut', 'DapTerminate' },
+    config = function()
+      require('plugins.dap.dap')
+    end,
+  },
+  --- dap.nvim-dapui
+  {
+    'rcarriga/nvim-dap-ui',
+    cmd = { 'DapToggleBreakpoint', 'DapContinue', 'DapStepOver', 'DapStepInto', 'DapStepOut', 'DapTerminate' },
+    after = 'nvim-dap',
+    config = function()
+      require('plugins.dap.dapui')
+    end,
+  },
+  --- dap.nvim-dap-python
+  {
+    'mfussenegger/nvim-dap-python',
+    ft = 'py',
+    after = 'nvim-dap',
+    config = function()
+      require('dap-python').setup('~/.local/share/nvim/mason/packages/debugpy/venv/bin/python')
+    end,
+  },
+  -- ************************************** lsp ******************************
+  --- lsp.cmp
+  { 'hrsh7th/nvim-cmp' },
+  { 'hrsh7th/cmp-buffer' },
+  { 'hrsh7th/cmp-path' },
+  { 'hrsh7th/cmp-cmdline' },
+  { 'saadparwaiz1/cmp_luasnip' },
+  { 'hrsh7th/cmp-nvim-lsp' },
 
-  -- tools
-    {
-    'kyazdani42/nvim-tree.lua',
-    cmd = { 'NvimTreeToggle', 'NvimTreeFocus' },
-    config = function()
-      require('plugins.ui.tree')
-    end,
-  },
+  --- lsp.conform
+  { 'stevearc/conform.nvim' },
+
+  --- lsp.lsp-mason
+  { 'neovim/nvim-lspconfig' },
+  { 'nvimtools/none-ls.nvim' },
+  { 'williamboman/mason-lspconfig.nvim' },
+  { 'williamboman/mason.nvim' },
+  { 'jayp0521/mason-nvim-dap.nvim' },
+  { 'jayp0521/mason-null-ls.nvim' },
 }
 
 local opts = {

@@ -1,4 +1,4 @@
-local icons = require('plugins.ui.icons')
+local icons = require('plugins.ui.icons.icons')
 
 local function is_ft(buf, ft)
   return vim.bo[buf].filetype == ft

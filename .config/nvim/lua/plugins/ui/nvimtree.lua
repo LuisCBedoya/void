@@ -1,4 +1,4 @@
-local icons = require('plugins.ui.icons')
+local icons = require('plugins.ui.icons.icons')
 
 require('nvim-tree').setup({
   experimental = {},
